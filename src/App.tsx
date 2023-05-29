@@ -4,10 +4,11 @@ import { Profile } from './components/Profile'
 function App() {
 
   return (
-    <>
+
+    <div className='bg-primary'>
       <NavBar />
       <Profile />
-    </>
+    </div>
   )
 }
 
