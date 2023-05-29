@@ -1,5 +1,5 @@
 import React from 'react';
-import imagePortfolio from '../../assets/forMe.jpeg'
+import imagePortfolio from '../../assets/profile2.png'
 
 export type ProfileProps = {
 }
@@ -11,7 +11,7 @@ const Profile: React.FC<ProfileProps> = () => {
 				<img
 					alt="Man"
 					src={imagePortfolio}
-					className="aspect-square w-full rounded-full object-cover"
+					className="rounded-full h-40"
 				/>
 
 				<blockquote className="sm:col-span-2">
