@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -8,14 +7,14 @@ import "swiper/css/pagination";
 // import "./styles.css";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-import socioextrategico from '../../assets/socio.png'
-import farmastack from '../../assets/farmaStack.png'
-import countries from '../../assets/countries.png'
-import anime from '../../assets/Anime.png'
-import dbz from '../../assets/dbz.png'
-import marvel from '../../assets/marvel.png'
-import rick from '../../assets/rick_y_morty.png'
-import soap from '../../assets/soapPet.jpg'
+import anime from '../../assets/Anime.png';
+import countries from '../../assets/countries.png';
+import dbz from '../../assets/dbz.png';
+import farmastack from '../../assets/farmaStack.png';
+import marvel from '../../assets/marvel.png';
+import rick from '../../assets/rick_y_morty.png';
+import soap from '../../assets/soapPet.jpg';
+import socioextrategico from '../../assets/socio.png';
 
 export default function App() {
 	return (
