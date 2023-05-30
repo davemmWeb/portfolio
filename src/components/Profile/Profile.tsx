@@ -20,7 +20,7 @@ const Profile: React.FC<ProfileProps> = () => {
 						Full Stack Developer
 					</p>
 					<div className="space-x-4">
-						<button className='bg-terseary text-text '><span className='text-sm'>Dowload CV</span></button>
+						<button className='bg-third text-text '><span className='text-sm'>Dowload CV</span></button>
 						<button className='text-text border-secondary border-2 text-sm'>Learn More</button>
 					</div>
 				</blockquote>

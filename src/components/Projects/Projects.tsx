@@ -16,7 +16,55 @@ import rick from '../../assets/rick_y_morty.png';
 import soap from '../../assets/soapPet.jpg';
 import socioextrategico from '../../assets/socio.png';
 
+interface DataProjects {
+	name: string
+	url: string
+	href: string
+}
+
 export default function App() {
+	const projects: DataProjects[] = [
+		{
+			name: "Socioextrategico",
+			url: socioextrategico,
+			href: "https://socioextrategico.co/"
+		},
+		{
+			name: "Farmastack",
+			url: farmastack,
+			href: "https://main--gleaming-mooncake-32ca84.netlify.app/"
+		},
+		{
+			name: "Marvel",
+			url: marvel,
+			href: "https://prueba-d-corp.vercel.app/"
+		},
+		{
+			name: "Dbz",
+			url: dbz,
+			href: "https://davemmweb.github.io/project_typescript/"
+		},
+		{
+			name: "Anime",
+			url: anime,
+			href: "https://prueba-opperweb.vercel.app/"
+		},
+		{
+			name: "Soap&pet",
+			url: soap,
+			href: "https://davemmweb.github.io/soap-pet-master/"
+		},
+		{
+			name: "Rick and Morty",
+			url: rick,
+			href: "https://davemmweb.github.io/project_rick_and_morty/#/"
+		},
+		{
+			name: "Countries",
+			url: countries,
+			href: "https://countriesclient-production.up.railway.app/home"
+		},
+	]
 	return (
 		<section>
 			<div
@@ -26,7 +74,7 @@ export default function App() {
 					<div
 						className="relative overflow-hidden rounded-lg sm:h-80 lg:order-last"
 					>
-
+						<h1 className="text-text">Click on the image to see the deploy</h1>
 						<Swiper
 							effect={"coverflow"}
 							grabCursor={true}
@@ -43,102 +91,16 @@ export default function App() {
 							modules={[EffectCoverflow, Pagination]}
 							className="mySwiper"
 						>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={socioextrategico} alt="Socioextrategico" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Socioextrategico
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={farmastack} alt="farmastack" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Farmastack
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={countries} alt="countries" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Countries
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={anime} alt="anime" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Anime
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={dbz} alt="Dragon Ball" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Dragon Ball
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={marvel} alt="marvel" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Marvel
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={rick} alt="Rick and Morty" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Rick and Morty
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide>
-								<div className="relative">
-									<img src={soap} alt="Soap & Pet" />
-									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-										Soap & Pet
-									</h1>
-									<div className="bg-secondary rounded-b-lg">
-										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
-										<p>This is a project where I working in the creation.</p>
-									</div>
-								</div>
-							</SwiperSlide>
+							{
+								projects.map((pro, i) => {
+									return <SwiperSlide key={i}>
+
+										<a href={pro.href} target="_blank">
+											<img src={pro.url} alt={pro.name} />
+										</a>
+									</SwiperSlide>
+								})
+							}
 
 						</Swiper>
 					</div>

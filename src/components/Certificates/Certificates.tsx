@@ -39,12 +39,12 @@ const Certificates: React.FC<CertificatesProps> = () => {
 				{
 					certificates.map((certificate, i) => {
 						return <a key={i}
-							className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-terseary/10 hover:shadow-terseary/10"
+							className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-third/10 hover:shadow-third/10 bg-bgTwo"
 							href="/services/digital-campaigns"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="h-10 w-10 text-terseary"
+								className="h-10 w-10 text-third"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -76,7 +76,7 @@ const Certificates: React.FC<CertificatesProps> = () => {
 			<div className="mt-12 text-center">
 				<a
 					href="#"
-					className="inline-block rounded bg-terseary px-12 py-3 text-sm font-medium text-white transition hover:bg-terseary focus:outline-none focus:ring focus:ring-text"
+					className="inline-block rounded bg-third px-12 py-3 text-sm font-medium text-white transition hover:bg-third focus:outline-none focus:ring focus:ring-text"
 				>
 					Get Started Today
 				</a>
