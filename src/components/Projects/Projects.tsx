@@ -1,118 +1,165 @@
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+// import "./styles.css";
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper";
+import socioextrategico from '../../assets/socio.png'
+import farmastack from '../../assets/farmaStack.png'
+import countries from '../../assets/countries.png'
+import anime from '../../assets/Anime.png'
+import dbz from '../../assets/dbz.png'
+import marvel from '../../assets/marvel.png'
+import rick from '../../assets/rick_y_morty.png'
+import soap from '../../assets/soapPet.jpg'
 
-export default function Example() {
+export default function App() {
 	return (
-		<div>
-			<Carousel className="rounded-xl">
-				<div className="relative h-full w-full">
-					<img
-						src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-						alt="image 1"
-						className="h-full w-full object-cover"
-					/>
-					<div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-						<div className="w-3/4 text-center md:w-2/4">
-							<Typography
-								variant="h1"
-								color="white"
-								className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-							>
-								The Beauty of Nature
-							</Typography>
-							<Typography
-								variant="lead"
-								color="white"
-								className="mb-12 opacity-80"
-							>
-								It is not so much for its beauty that the forest makes a claim
-								upon men&apos;s hearts, as for that subtle something, that
-								quality of air that emanation from old trees, that so
-								wonderfully changes and renews a weary spirit.
-							</Typography>
-							<div className="flex justify-center gap-2">
-								<Button size="lg" color="white">
-									Explore
-								</Button>
-								<Button size="lg" color="white" variant="text">
-									Gallery
-								</Button>
-							</div>
-						</div>
+		<section>
+			<div
+				className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
+			>
+				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+					<div
+						className="relative overflow-hidden rounded-lg sm:h-80 lg:order-last"
+					>
+
+						<Swiper
+							effect={"coverflow"}
+							grabCursor={true}
+							centeredSlides={true}
+							slidesPerView={"auto"}
+							coverflowEffect={{
+								rotate: 50,
+								stretch: 0,
+								depth: 100,
+								modifier: 1,
+								slideShadows: true,
+							}}
+							pagination={true}
+							modules={[EffectCoverflow, Pagination]}
+							className="mySwiper"
+						>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={socioextrategico} alt="Socioextrategico" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Socioextrategico
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={farmastack} alt="farmastack" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Farmastack
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={countries} alt="countries" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Countries
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={anime} alt="anime" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Anime
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={dbz} alt="Dragon Ball" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Dragon Ball
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={marvel} alt="marvel" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Marvel
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={rick} alt="Rick and Morty" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Rick and Morty
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="relative">
+									<img src={soap} alt="Soap & Pet" />
+									<h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+										Soap & Pet
+									</h1>
+									<div className="bg-secondary rounded-b-lg">
+										<a href="https://socioextrategico.co/" target="_blank">Go project</a>
+										<p>This is a project where I working in the creation.</p>
+									</div>
+								</div>
+							</SwiperSlide>
+
+						</Swiper>
+					</div>
+					<div className="lg:py-24">
+						<h2 className="font-bold sm:text-4xl text-text">My Projects</h2>
+
+						<p className="mt-4 text-gray-600">
+							These are some of the projects I have worked on.
+						</p>
+
+						<a
+							href="#"
+							className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+						>
+							Get Started Today
+						</a>
 					</div>
 				</div>
-				<div className="relative h-full w-full">
-					<img
-						src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-						alt="image 2"
-						className="h-full w-full object-cover"
-					/>
-					<div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
-						<div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
-							<Typography
-								variant="h1"
-								color="white"
-								className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-							>
-								The Beauty of Nature
-							</Typography>
-							<Typography
-								variant="lead"
-								color="white"
-								className="mb-12 opacity-80"
-							>
-								It is not so much for its beauty that the forest makes a claim
-								upon men&apos;s hearts, as for that subtle something, that
-								quality of air that emanation from old trees, that so
-								wonderfully changes and renews a weary spirit.
-							</Typography>
-							<div className="flex gap-2">
-								<Button size="lg" color="white">
-									Explore
-								</Button>
-								<Button size="lg" color="white" variant="text">
-									Gallery
-								</Button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="relative h-full w-full">
-					<img
-						src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-						alt="image 3"
-						className="h-full w-full object-cover"
-					/>
-					<div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
-						<div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
-							<Typography
-								variant="h1"
-								color="white"
-								className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-							>
-								The Beauty of Nature
-							</Typography>
-							<Typography
-								variant="lead"
-								color="white"
-								className="mb-12 opacity-80"
-							>
-								It is not so much for its beauty that the forest makes a claim
-								upon men&apos;s hearts, as for that subtle something, that
-								quality of air that emanation from old trees, that so
-								wonderfully changes and renews a weary spirit.
-							</Typography>
-							<div className="flex gap-2">
-								<Button size="lg" color="white">
-									Explore
-								</Button>
-								<Button size="lg" color="white" variant="text">
-									Gallery
-								</Button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</Carousel>
-		</div>
+			</div>
+
+		</section>
 	);
 }
