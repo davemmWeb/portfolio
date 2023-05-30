@@ -10,6 +10,7 @@ const Contact: React.FC<ContactProps> = () => {
 	Plugins:
 	  - @tailwindcss/forms
   */}
+	const rows = 8
 	return (
 
 		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -71,7 +72,7 @@ const Contact: React.FC<ContactProps> = () => {
 						<textarea
 							className="w-full rounded-lg border-gray-200 p-3 text-sm  bg-primary"
 							placeholder="Message"
-							rows="8"
+							rows={rows}
 							id="message"
 						></textarea>
 					</div>
