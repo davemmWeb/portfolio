@@ -64,7 +64,7 @@ const About: React.FC<AboutProps> = () => {
 				{
 					links.map((link, i) => {
 						return <div key={i} className="flex items-start gap-4">
-							<span className="shrink-0 rounded-lg bg-gray-800 p-4">
+							<span className="shrink-0 rounded-full bg-gray-800 p-4">
 								<a href={link.url} target='_blank' className={link.icon}></a>
 							</span>
 
