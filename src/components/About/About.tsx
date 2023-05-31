@@ -16,7 +16,7 @@ const About: React.FC<AboutProps> = () => {
 		{
 			title: "Email Address",
 			name: "davemm.ku@gmail.com",
-			url: "davemm.ku@gmail.com",
+			url: "mailto:davemm.ku@gmail.com?subject=Oferta laboral&body=Cuerpo del mensaje",
 			icon: "fab fa-google"
 		},
 		{
@@ -60,7 +60,7 @@ const About: React.FC<AboutProps> = () => {
 				{
 					links.map((link, i) => {
 						return <div key={i} className="gap-4 sm:ml-4">
-							<span className="rounded-full bg-gray-800 p-2">
+							<span className="rounded-full bg-gray-800 p-2 shadow-xl transition hover:border-third/10 hover:shadow-third/10">
 								<a href={link.url} target='_blank' className={link.icon} style={{ width: "1.5rem" }}></a>
 							</span>
 

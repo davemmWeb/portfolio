@@ -15,7 +15,7 @@ const Contact: React.FC<ContactProps> = () => {
 
 		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" id='contact'>
 			<div className="mx-auto max-w-lg text-center">
-				<h1 className="text-2xl font-bold sm:text-3xl text-text">Get in touch</h1>
+				<h1 className="text-2xl font-bold sm:text-3xl text-text">Contact me</h1>
 			</div>
 
 			<div className="rounded-lg bg-bgOne p-8 shadow-lg lg:col-span-3 lg:p-12">
