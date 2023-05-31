@@ -1,1 +1,8 @@
+@font-face {
+    font-family: 'prompt';
+    src: url('./assets/Prompt-Bold.ttf');
+  }
 
+body {
+    font-family: prompt, sans-serif;
+}  

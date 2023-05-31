@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 export type CertificatesProps = {
 
@@ -8,6 +9,7 @@ interface DataCertificate {
 	description: string
 }
 const Certificates: React.FC<CertificatesProps> = () => {
+
 	const certificates: DataCertificate[] = [
 		{
 			name: "Introduction to Cloudinary for Node.js",
@@ -15,13 +17,17 @@ const Certificates: React.FC<CertificatesProps> = () => {
 		},
 		{
 			name: "APPLICATION OF THE SCRUM FRAMEWORK FOR SOFTWARE DEVELOPMENT PROJECTS",
-			description: "La Certificación Scrum que ofrece el SENA (Servicio Nacional de Aprendizaje) es una credencial profesional que valida los conocimientos y habilidades de un individuo en la implementación de metodologías Scrum para la gestión de proyectos. Scrum es un marco ágil ampliamente utilizado en el desarrollo de software y otras industrias para mejorar la colaboración en equipo, la eficiencia y la entrega de productos."
+			description: "The Scrum Certification offered by SENA (National Learning Service) is a professional credential that validates an individual's knowledge and skills in implementing Scrum methodologies for project management. Scrum is an agile framework widely used in software development and other industries to improve team collaboration, efficiency, and product delivery."
 		},
 		{
 			name: "Full Stack Web Developer",
-			description: "La Certificación de desarrollador web Full Stack que ofrece Henry es un programa integral diseñado para equipar a las personas con las habilidades y los conocimientos necesarios para dominar el desarrollo web tanto front-end como back-end. Henry es una institución educativa de renombre conocida por su enfoque inmersivo y práctico para la enseñanza del desarrollo web."
+			description: "Henry's Full Stack Web Developer Certification is a comprehensive program designed to equip individuals with the skills and knowledge to master both front-end and back-end web development. Henry is a renowned educational institution known for its immersive and hands-on approach to teaching web development."
 		},
 	]
+
+	const showDetail = (detail) => {
+		Swal.fire(detail)
+	}
 	return <section className="bg-bgOne text-white" id='certifications'>
 		<div
 			className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
@@ -37,10 +43,10 @@ const Certificates: React.FC<CertificatesProps> = () => {
 
 
 				{
-					certificates.map((certificate, i) => {
-						return <a key={i}
-							className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-third/10 hover:shadow-third/10 bg-bgTwo"
-							href="/services/digital-campaigns"
+					certificates.map((certificate, i) => (
+						<div key={i}
+							className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-third/10 hover:shadow-third/10 bg-bgTwo text-center"
+
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -62,12 +68,21 @@ const Certificates: React.FC<CertificatesProps> = () => {
 							</svg>
 
 							<h2 className="mt-4 text-xl font-bold text-white">{certificate.name}</h2>
-
-							<p className="mt-1 text-sm text-gray-300">
-								{certificate.description}
-							</p>
-						</a>
-					})
+							<div className="space-x-4 mt-6">
+								<button
+									type="button"
+									className="inline-block rounded bg-third px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-text shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+									Certificate
+								</button>
+								<button
+									onClick={() => showDetail(certificate.description)}
+									type="button"
+									className="mt-4 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-text shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+									Learn More
+								</button>
+							</div>
+						</div>
+					))
 				}
 
 

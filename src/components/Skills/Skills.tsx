@@ -72,7 +72,7 @@ const Skills: React.FC<SkillsProps> = () => {
 			</div>
 
 			<div
-				className="mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 bg-bgTwo"
+				className="rounded-xl border border-gray-800 mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 bg-bgTwo shadow-xl transition hover:border-third/10 hover:shadow-third/10"
 			>
 				{skills.map((skill, i) => (
 					<div key={i} className="mb-8 mt-8 ml-8 text-center">
