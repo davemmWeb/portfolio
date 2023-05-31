@@ -1,5 +1,8 @@
 import React from 'react';
 import Swal from 'sweetalert2';
+import sena from '../../assets/Certificado Sena Scrum.png'
+import henry from '../../assets/CertificateHenry.jpg'
+import cloudinary from '../../assets/CertificateCloudinary.png'
 
 export type CertificatesProps = {
 
@@ -7,26 +10,45 @@ export type CertificatesProps = {
 interface DataCertificate {
 	name: string
 	description: string
+	image: string
 }
 const Certificates: React.FC<CertificatesProps> = () => {
 
 	const certificates: DataCertificate[] = [
 		{
 			name: "Introduction to Cloudinary for Node.js",
-			description: "Cloudinary Certification is a professional credential that validates an individual's expertise in working with the Cloudinary platform. Cloudinary is a leading cloud-based media management solution that enables businesses to securely upload, store, manipulate, and deliver images and videos at scale."
+			description: "Cloudinary Certification is a professional credential that validates an individual's expertise in working with the Cloudinary platform. Cloudinary is a leading cloud-based media management solution that enables businesses to securely upload, store, manipulate, and deliver images and videos at scale.",
+			image: cloudinary
 		},
 		{
 			name: "APPLICATION OF THE SCRUM FRAMEWORK FOR SOFTWARE DEVELOPMENT PROJECTS",
-			description: "The Scrum Certification offered by SENA (National Learning Service) is a professional credential that validates an individual's knowledge and skills in implementing Scrum methodologies for project management. Scrum is an agile framework widely used in software development and other industries to improve team collaboration, efficiency, and product delivery."
+			description: "The Scrum Certification offered by SENA (National Learning Service) is a professional credential that validates an individual's knowledge and skills in implementing Scrum methodologies for project management. Scrum is an agile framework widely used in software development and other industries to improve team collaboration, efficiency, and product delivery.",
+			image: sena
 		},
 		{
 			name: "Full Stack Web Developer",
-			description: "Henry's Full Stack Web Developer Certification is a comprehensive program designed to equip individuals with the skills and knowledge to master both front-end and back-end web development. Henry is a renowned educational institution known for its immersive and hands-on approach to teaching web development."
+			description: "Henry's Full Stack Web Developer Certification is a comprehensive program designed to equip individuals with the skills and knowledge to master both front-end and back-end web development. Henry is a renowned educational institution known for its immersive and hands-on approach to teaching web development.",
+			image: henry
 		},
 	]
 
 	const showDetail = (detail) => {
-		Swal.fire(detail)
+		Swal.fire({
+			text: detail,
+			color: 'rgba(255, 255, 255, 1)',
+			background: 'rgba(51, 51, 51, 1)',
+			confirmButtonColor: 'rgb(0,0,255)',
+		})
+	}
+	const showImage = (image) => {
+		Swal.fire({
+			imageUrl: image,
+			imageHeight: 300,
+			imageAlt: 'A tall image',
+			confirmButtonColor: 'rgb(0,0,255)',
+			background: 'rgba(51, 51, 51, 1)',
+
+		})
 	}
 	return <section className="bg-bgOne text-white" id='certifications'>
 		<div
@@ -70,6 +92,7 @@ const Certificates: React.FC<CertificatesProps> = () => {
 							<h2 className="mt-4 text-xl font-bold text-white">{certificate.name}</h2>
 							<div className="space-x-4 mt-6">
 								<button
+									onClick={() => showImage(certificate.image)}
 									type="button"
 									className="inline-block rounded bg-third px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-text shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
 									Certificate

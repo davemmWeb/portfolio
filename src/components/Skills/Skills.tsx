@@ -64,7 +64,7 @@ const Skills: React.FC<SkillsProps> = () => {
 	]
 	return <section className="bg-bgOne text-white" id='skills'>
 		<div className="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-			<div className="max-w-xl flex flex-col items-center justify-center">
+			<div className="ml-30 md:ml-5 text-center">
 				<h2 className="text-3xl font-bold sm:text-4xl">Skills</h2>
 				<p className="mt-4 text-gray-300">
 					Some of my most outstanding experiences in my profession
@@ -75,10 +75,10 @@ const Skills: React.FC<SkillsProps> = () => {
 				className="rounded-xl border border-gray-800 mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 bg-bgTwo shadow-xl transition hover:border-third/10 hover:shadow-third/10"
 			>
 				{skills.map((skill, i) => (
-					<div key={i} className="mb-8 mt-8 ml-8 text-center">
+					<div key={i} className="mb-8 mt-8 ml-4 mr-4 md:ml-14 sm:ml-48">
 						<h2 className="text-2xl font-bold text-secondary">{skill.percentage}</h2>
 						<span className="rounded-lg p-4">
-							<img src={skill.src} alt={skill.name} className="h-8 w-8 sm:h-12 sm:w-12" />
+							<img src={skill.src} alt={skill.name} className="h-8 w-8 md:h-24 md:w-24 sm:h-20 sm:w-20" />
 						</span>
 						<p className="mt-1 text-lg text-third">{skill.name}</p>
 					</div>

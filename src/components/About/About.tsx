@@ -12,40 +12,35 @@ interface DataLink {
 
 const About: React.FC<AboutProps> = () => {
 	const links: DataLink[] = [
-		{
-			title: "Full Name",
-			name: "David Duarte",
-			url: "",
-			icon: ""
-		},
+
 		{
 			title: "Email Address",
 			name: "davemm.ku@gmail.com",
 			url: "davemm.ku@gmail.com",
-			icon: ""
+			icon: "fab fa-google"
 		},
 		{
-			title: "whatsapp",
-			name: "David",
+			title: "Whatsapp",
+			name: "+573103730060",
 			url: "https://wa.link/yhfrw5",
 			icon: "fab fa-whatsapp"
 		},
 		{
-			title: "github",
-			name: "davemmWeb",
+			title: "Github",
+			name: "github.com/davemmWeb",
 			url: "https://github.com/davemmWeb",
 			icon: "fab fa-github"
 		},
 		{
-			title: "linkedin",
-			name: "davemmWeb",
+			title: "Linkedin",
+			name: "linkedin.com/in/david-duarte",
 			url: "https://www.linkedin.com/in/david-duarte-5756031b9/",
 			icon: "fab fa-linkedin"
 		},
 	]
-	return <section className="bg-bgOne text-white" id='about'>
+	return <section className="bg-bgOne text-white text-center" id='about'>
 		<div className="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-			<div className="max-w-xl flex flex-col items-center justify-center">
+			<div className="flex flex-col items-center justify-center">
 				<h2 className="text-3xl font-bold sm:text-4xl text-center">About</h2>
 
 				<p className="mt-4 text-gray-300">
@@ -59,18 +54,18 @@ const About: React.FC<AboutProps> = () => {
 
 
 			<div
-				className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+				className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-4"
 			>
 
 				{
 					links.map((link, i) => {
-						return <div key={i} className="flex items-start gap-4">
-							<span className="shrink-0 rounded-full bg-gray-800 p-4">
-								<a href={link.url} target='_blank' className={link.icon}></a>
+						return <div key={i} className="gap-4 sm:ml-4">
+							<span className="rounded-full bg-gray-800 p-2">
+								<a href={link.url} target='_blank' className={link.icon} style={{ width: "1.5rem" }}></a>
 							</span>
 
 							<div>
-								<h2 className="text-lg font-bold">{link.title}</h2>
+								<h2 className="text-sm mt-8">{link.title}</h2>
 
 								<p className="mt-1 text-sm text-gray-300">
 									{link.name}
