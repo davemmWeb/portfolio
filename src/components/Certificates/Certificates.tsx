@@ -22,7 +22,7 @@ const Certificates: React.FC<CertificatesProps> = () => {
 			description: "La Certificación de desarrollador web Full Stack que ofrece Henry es un programa integral diseñado para equipar a las personas con las habilidades y los conocimientos necesarios para dominar el desarrollo web tanto front-end como back-end. Henry es una institución educativa de renombre conocida por su enfoque inmersivo y práctico para la enseñanza del desarrollo web."
 		},
 	]
-	return <section className="bg-primary text-white">
+	return <section className="bg-bgOne text-white" id='certifications'>
 		<div
 			className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
 		>
@@ -73,14 +73,14 @@ const Certificates: React.FC<CertificatesProps> = () => {
 
 			</div>
 
-			<div className="mt-12 text-center">
+			{/* <div className="mt-12 text-center">
 				<a
 					href="#"
 					className="inline-block rounded bg-third px-12 py-3 text-sm font-medium text-white transition hover:bg-third focus:outline-none focus:ring focus:ring-text"
 				>
 					Get Started Today
 				</a>
-			</div>
+			</div> */}
 		</div>
 	</section>;
 };

@@ -1,11 +1,14 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
+import { Link } from 'react-scroll'
+
 const navigation = [
-	{ name: 'About me', href: '#', current: true },
-	{ name: 'Services', href: '#', current: false },
-	{ name: 'Projects', href: '#', current: false },
-	{ name: 'Contact me', href: '#', current: false },
+	{ name: 'About me', href: 'about', current: false },
+	{ name: 'Certifications', href: 'certifications', current: false },
+	{ name: 'Projects', href: 'projects', current: false },
+	{ name: 'Skills', href: 'skills', current: false },
+	{ name: 'Contact me', href: 'contact', current: false },
 ]
 
 function classNames(...classes: any) {
@@ -13,8 +16,9 @@ function classNames(...classes: any) {
 }
 
 export default function NavBar() {
+
 	return (
-		<Disclosure as="nav" className="bg-primary">
+		<Disclosure as="nav" className="bg-transparent w-full fixed">
 			{({ open }) => (
 				<>
 					<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -35,21 +39,23 @@ export default function NavBar() {
 									<h1 className='text-white' style={{ fontSize: "20px" }}>David Duarte</h1>
 								</div>
 								<div className="hidden sm:ml-6 sm:block">
-									<div className="flex space-x-4">
+									<ul className="flex space-x-4">
 										{navigation.map((item) => (
-											<a
-												key={item.name}
-												href={item.href}
-												className={classNames(
-													item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-													'rounded-md px-3 py-2 text-sm font-medium'
-												)}
-												aria-current={item.current ? 'page' : undefined}
-											>
-												{item.name}
-											</a>
+											<li key={item.name}>
+												<Link
+													activeClass="active" to={item.href} spy={true} smooth={true} offset={50} duration={1000}
+													// href={item.href}
+													className={classNames(
+														item.current ? 'bg-bgTwo text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+														'rounded-md px-3 py-2 text-sm font-medium'
+													)}
+													aria-current={item.current ? 'page' : undefined}
+												>
+													{item.name}
+												</Link>
+											</li>
 										))}
-									</div>
+									</ul>
 								</div>
 							</div>
 						</div>

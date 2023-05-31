@@ -10,8 +10,10 @@ function App() {
   // npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
   return (
 
-    <div className='bg-primary'>
-      <NavBar />
+    <div className='bg-bgOne flex flex-col items-center justify-center min-h-screen'>
+      <div className="fixed top-0 left-0 right-0">
+        <NavBar />
+      </div>
       <Profile />
       <About />
       <Certificates />

@@ -62,34 +62,27 @@ const Skills: React.FC<SkillsProps> = () => {
 			percentage: "70%"
 		},
 	]
-	return <section className="bg-primary text-white">
+	return <section className="bg-bgOne text-white" id='skills'>
 		<div className="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-			<div className="max-w-xl">
+			<div className="max-w-xl flex flex-col items-center justify-center">
 				<h2 className="text-3xl font-bold sm:text-4xl">Skills</h2>
-
 				<p className="mt-4 text-gray-300">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-					dolores iure fugit totam iste obcaecati. Consequatur ipsa quod ipsum
-					sequi culpa delectus, cumque id tenetur quibusdam, quos fuga minima.
+					Some of my most outstanding experiences in my profession
 				</p>
 			</div>
 
 			<div
-				className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-4 bg-bgTwo"
+				className="mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 bg-bgTwo"
 			>
-				{
-					skills.map((skill, i) => {
-						return <div key={i}>
-							<h2 className="text-xl font-bold text-secondary">{skill.percentage}</h2>
-							<span className="rounded-lg p-4">
-								<img src={skill.src} alt={skill.name} className='h-8 w-8' />
-							</span>
-							<p className="mt-1 text-lg text-third">
-								{skill.name}
-							</p>
-						</div>
-					})
-				}
+				{skills.map((skill, i) => (
+					<div key={i} className="mb-8 mt-8 ml-8 text-center">
+						<h2 className="text-2xl font-bold text-secondary">{skill.percentage}</h2>
+						<span className="rounded-lg p-4">
+							<img src={skill.src} alt={skill.name} className="h-8 w-8 sm:h-12 sm:w-12" />
+						</span>
+						<p className="mt-1 text-lg text-third">{skill.name}</p>
+					</div>
+				))}
 
 			</div>
 		</div>

@@ -43,10 +43,10 @@ const About: React.FC<AboutProps> = () => {
 			icon: "fab fa-linkedin"
 		},
 	]
-	return <section className="bg-primary text-white">
+	return <section className="bg-bgOne text-white" id='about'>
 		<div className="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-			<div className="max-w-xl">
-				<h2 className="text-3xl font-bold sm:text-4xl">About</h2>
+			<div className="max-w-xl flex flex-col items-center justify-center">
+				<h2 className="text-3xl font-bold sm:text-4xl text-center">About</h2>
 
 				<p className="mt-4 text-gray-300">
 					My name is David Duarte, software engineer and fullstack developer with more than 4 years
@@ -56,6 +56,7 @@ const About: React.FC<AboutProps> = () => {
 					I focus on solving problems and I love teamwork. I also like to collaborate on interface design.
 				</p>
 			</div>
+
 
 			<div
 				className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3"

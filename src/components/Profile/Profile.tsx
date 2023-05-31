@@ -5,8 +5,8 @@ export type ProfileProps = {
 }
 
 const Profile: React.FC<ProfileProps> = () => {
-	return <div className="mx-auto max-w-5xl px-4 py-8">
-		<section className="rounded-lg bg-primary p-8">
+	return <div className="mx-auto max-w-5xl px-4 py-8" id='profile'>
+		<section className="rounded-lg bg-bgOne p-8">
 			<div className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
 				<img
 					alt="Man"

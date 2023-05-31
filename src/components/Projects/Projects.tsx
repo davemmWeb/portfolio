@@ -66,7 +66,7 @@ export default function App() {
 		},
 	]
 	return (
-		<section>
+		<section id="projects">
 			<div
 				className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
 			>
@@ -74,7 +74,7 @@ export default function App() {
 					<div
 						className="relative overflow-hidden rounded-lg sm:h-80 lg:order-last"
 					>
-						<h1 className="text-text">Click on the image to see the deploy</h1>
+						<h1 className="text-text text-center mb-2">Click on the image to see the deploy</h1>
 						<Swiper
 							effect={"coverflow"}
 							grabCursor={true}
@@ -105,18 +105,11 @@ export default function App() {
 						</Swiper>
 					</div>
 					<div className="lg:py-24">
-						<h2 className="font-bold sm:text-4xl text-text">My Projects</h2>
+						<h2 className="font-bold sm:text-4xl text-text text-center">My Projects</h2>
 
-						<p className="mt-4 text-gray-600">
+						<p className="mt-4 text-gray-600 text-center">
 							These are some of the projects I have worked on.
 						</p>
-
-						<a
-							href="#"
-							className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-						>
-							Get Started Today
-						</a>
 					</div>
 				</div>
 			</div>
