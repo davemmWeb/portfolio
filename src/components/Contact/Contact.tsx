@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2';
 
@@ -46,7 +46,6 @@ const Contact: React.FC<ContactProps> = () => {
 			message: ''
 		})
 	}
-	console.log(inputs)
 	const rows = 8
 
 	const form = useRef<HTMLFormElement | null>(null);
