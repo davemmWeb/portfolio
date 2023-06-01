@@ -72,15 +72,13 @@ const Skills: React.FC<SkillsProps> = () => {
 			</div>
 
 			<div
-				className="rounded-xl border border-gray-800 mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 bg-bgTwo shadow-xl transition hover:border-third/10 hover:shadow-third/10"
+				className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-4"
 			>
 				{skills.map((skill, i) => (
-					<div key={i} className="mb-8 mt-8 ml-4 mr-4 md:ml-14 sm:ml-48">
-						<h2 className="text-2xl font-bold text-secondary">{skill.percentage}</h2>
-						<span className="rounded-lg p-4">
-							<img src={skill.src} alt={skill.name} className="h-8 w-8 md:h-24 md:w-24 sm:h-20 sm:w-20" />
-						</span>
-						<p className="mt-1 text-lg text-third">{skill.name}</p>
+					<div key={i} className="gap-4 p-2 shadow-xl transition hover:border-third/10 hover:shadow-third/10">
+						<h2 className="text-2xl font-bold text-secondary" style={{ marginLeft: "40%" }}>{skill.percentage}</h2>
+						<img src={skill.src} alt={skill.name} className="h-8 w-8 md:h-24 md:w-24 sm:h-20 sm:w-20" style={{ marginLeft: "40%" }} />
+						<p className="mt-1 text-lg text-third" style={{ marginLeft: "35%" }}>{skill.name}</p>
 					</div>
 				))}
 
