@@ -1,8 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2';
 
 export type ContactProps = {
+}
+
+interface DataInputs {
+	user_name: string
+	lastName: string
+	user_email: string
+	phone: string
+	message: string
 }
 
 const Contact: React.FC<ContactProps> = () => {
@@ -12,12 +20,49 @@ const Contact: React.FC<ContactProps> = () => {
 	Plugins:
 	  - @tailwindcss/forms
   */}
+	const [inputs, setInputs] = useState<DataInputs>({
+		user_name: '',
+		lastName: '',
+		user_email: '',
+		phone: '',
+		message: ''
+	})
+
+	const handlerChange = (e) => {
+		e.preventDefault()
+		const { name, value } = e.target
+		setInputs({
+			...inputs,
+			[name]: value
+		})
+	}
+
+	const clearInputs = () => {
+		setInputs({
+			user_name: '',
+			lastName: '',
+			user_email: '',
+			phone: '',
+			message: ''
+		})
+	}
+	console.log(inputs)
 	const rows = 8
 
 	const form = useRef<HTMLFormElement | null>(null);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
+		const { user_name, lastName, user_email, phone, message } = inputs
+		if (![user_name, lastName, user_email, phone, message].every(Boolean)) {
+			Swal.fire({
+				icon: "error",
+				text: "Please complete all information",
+				background: "rgba(51, 51, 51, 1)",
+				confirmButtonColor: "rgb(0,0,255)"
+			})
+			return
+		}
 		if (form.current)
 			emailjs.sendForm('service_yplb73s', 'template_jgx73ij', form.current, 'LyUNhuQIHYXcROxRT')
 				.then((result) => {
@@ -28,10 +73,12 @@ const Contact: React.FC<ContactProps> = () => {
 						background: "rgba(51, 51, 51, 1)",
 						confirmButtonColor: "rgb(0,0,255)"
 					})
+					clearInputs()
 				}, (error) => {
 					console.log(error.text);
 				});
 	};
+
 	return (
 
 		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" id='contact'>
@@ -49,7 +96,9 @@ const Contact: React.FC<ContactProps> = () => {
 								placeholder="Name"
 								type="text"
 								id="name"
-								name='user_name'
+								name="user_name"
+								value={inputs.user_name}
+								onChange={handlerChange}
 							/>
 						</div>
 
@@ -60,6 +109,9 @@ const Contact: React.FC<ContactProps> = () => {
 								placeholder="Last name"
 								type="text"
 								id="lastName"
+								name="lastName"
+								value={inputs.lastName}
+								onChange={handlerChange}
 							/>
 						</div>
 					</div>
@@ -72,7 +124,9 @@ const Contact: React.FC<ContactProps> = () => {
 								placeholder="Email address"
 								type="email"
 								id="email"
-								name='user_email'
+								name="user_email"
+								value={inputs.user_email}
+								onChange={handlerChange}
 							/>
 						</div>
 
@@ -83,6 +137,9 @@ const Contact: React.FC<ContactProps> = () => {
 								placeholder="Phone Number"
 								type="tel"
 								id="phone"
+								name="phone"
+								value={inputs.phone}
+								onChange={handlerChange}
 							/>
 						</div>
 					</div>
@@ -97,7 +154,9 @@ const Contact: React.FC<ContactProps> = () => {
 							placeholder="Message"
 							rows={rows}
 							id="message"
-							name='message'
+							name="message"
+							value={inputs.message}
+							onChange={handlerChange}
 						></textarea>
 					</div>
 
