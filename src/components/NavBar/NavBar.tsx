@@ -10,6 +10,14 @@ const navigation = [
 	{ name: 'Skills', href: 'skills', current: false },
 	{ name: 'Contact me', href: 'contact', current: false },
 ]
+const navigationMobile = [
+	{ name: 'About me', href: 'about', current: false, icon: "fa fa-user" },
+	{ name: 'Certifications', href: 'certifications', current: false, icon: "fa fa-graduation-cap" },
+	{ name: 'Projects', href: 'projects', current: false, icon: "fa fa-briefcase" },
+	{ name: 'Skills', href: 'skills', current: false, icon: "fa fa-bolt" },
+	{ name: 'Contact me', href: 'contact', current: false, icon: "fa fa-envelope" },
+]
+
 
 function classNames(...classes: any) {
 	return classes.filter(Boolean).join(' ')
@@ -18,7 +26,7 @@ function classNames(...classes: any) {
 export default function NavBar() {
 
 	return (
-		<Disclosure as="nav" className="bg-transparent w-full fixed">
+		<Disclosure as="nav" className=" w-full fixed">
 			{({ open }) => (
 				<>
 					<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,7 +46,7 @@ export default function NavBar() {
 								<div className="flex flex-shrink-0 items-center">
 									<h1 className='text-white' style={{ fontSize: "20px" }}>David Duarte</h1>
 								</div>
-								<div className="hidden sm:ml-6 sm:block">
+								<div className="hidden sm:ml-4 sm:block md:ml-36">
 									<ul className="flex space-x-4">
 										{navigation.map((item) => (
 											<li key={item.name}>
@@ -46,7 +54,7 @@ export default function NavBar() {
 													activeClass="active" to={item.href} spy={true} smooth={true} offset={50} duration={1000}
 													// href={item.href}
 													className={classNames(
-														item.current ? 'bg-bgTwo text-white' : 'text-third hover:bg-gray-700 hover:text-white',
+														item.current ? 'bg-bgTwo text-white' : 'text-text hover:bg-gray-700 hover:text-white',
 														'rounded-md px-3 py-2 text-sm font-medium'
 													)}
 													aria-current={item.current ? 'page' : undefined}
@@ -63,7 +71,7 @@ export default function NavBar() {
 
 					<Disclosure.Panel className="sm:hidden">
 						<div className="space-y-1 px-2 pb-3 pt-2">
-							{navigation.map((item) => (
+							{navigationMobile.map((item) => (
 								<Link
 									key={item.name} activeClass="active" to={item.href} spy={true} smooth={true} offset={50} duration={1000}>
 									<Disclosure.Button
@@ -76,7 +84,7 @@ export default function NavBar() {
 										)}
 										aria-current={item.current ? 'page' : undefined}
 									>
-										{item.name}
+										<a className={item.icon} style={{ color: "white" }}></a>
 									</Disclosure.Button>
 								</Link>
 							))}
