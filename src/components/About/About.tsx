@@ -21,7 +21,7 @@ const About: React.FC<AboutProps> = () => {
 		},
 		{
 			title: "Whatsapp",
-			name: "+573103730060",
+			name: "+573222326450",
 			url: "https://wa.link/yhfrw5",
 			icon: "fab fa-whatsapp"
 		},
