@@ -52,7 +52,7 @@ export default function App() {
 		{
 			name: "Dogs",
 			url: dogs,
-			href: "https://dogs-2itijv9z8-davemmweb.vercel.app/home"
+			href: "https://dogs-snowy.vercel.app/?vercelToolbarCode=kLlFoPen2111luq"
 		},
 		{
 			name: "Rick and Morty",
