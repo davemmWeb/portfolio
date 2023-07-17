@@ -13,7 +13,7 @@ import dbz from '../../assets/dbz.png';
 import farmastack from '../../assets/farmaStack.png';
 import marvel from '../../assets/marvel.png';
 import rick from '../../assets/rick_y_morty.png';
-import soap from '../../assets/soapPet.jpg';
+import dogs from '../../assets/dogs.png';
 import socioextrategico from '../../assets/socio.png';
 
 interface DataProjects {
@@ -50,9 +50,9 @@ export default function App() {
 			href: "https://prueba-opperweb.vercel.app/"
 		},
 		{
-			name: "Soap&pet",
-			url: soap,
-			href: "https://davemmweb.github.io/soap-pet-master/"
+			name: "Dogs",
+			url: dogs,
+			href: "https://dogs-2itijv9z8-davemmweb.vercel.app/home"
 		},
 		{
 			name: "Rick and Morty",
