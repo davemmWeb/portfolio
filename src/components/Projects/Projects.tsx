@@ -40,9 +40,9 @@ export default function App() {
 			href: "https://prueba-d-corp.vercel.app/"
 		},
 		{
-			name: "Dbz",
+			name: "Shopping List",
 			url: dbz,
-			href: "https://davemmweb.github.io/project_typescript/"
+			href: "https://shopping-list-fawn.vercel.app/"
 		},
 		{
 			name: "Anime",
