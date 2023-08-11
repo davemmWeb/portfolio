@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 import anime from '../../assets/Anime.png';
 import countries from '../../assets/countries.png';
-import dbz from '../../assets/dbz.png';
+import shopping from '../../assets/shoppingList.png';
 import farmastack from '../../assets/farmaStack.png';
 import marvel from '../../assets/marvel.png';
 import rick from '../../assets/rick_y_morty.png';
@@ -41,7 +41,7 @@ export default function App() {
 		},
 		{
 			name: "Shopping List",
-			url: dbz,
+			url: shopping,
 			href: "https://shopping-list-fawn.vercel.app/"
 		},
 		{
