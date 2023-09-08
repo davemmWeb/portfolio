@@ -7,11 +7,8 @@ import "swiper/css/pagination";
 // import "./styles.css";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-import anime from '../../assets/Anime.png';
-import countries from '../../assets/countries.png';
 import shopping from '../../assets/shoppingList.png';
 import farmastack from '../../assets/farmaStack.png';
-import marvel from '../../assets/marvel.png';
 import rick from '../../assets/rick_y_morty.png';
 import dogs from '../../assets/dogs.png';
 import socioextrategico from '../../assets/socio.png';
@@ -35,19 +32,9 @@ export default function App() {
 			href: "https://main--gleaming-mooncake-32ca84.netlify.app/"
 		},
 		{
-			name: "Marvel",
-			url: marvel,
-			href: "https://prueba-d-corp.vercel.app/"
-		},
-		{
 			name: "Shopping List",
 			url: shopping,
 			href: "https://shopping-list-fawn.vercel.app/"
-		},
-		{
-			name: "Anime",
-			url: anime,
-			href: "https://prueba-opperweb.vercel.app/"
 		},
 		{
 			name: "Dogs",
@@ -58,11 +45,6 @@ export default function App() {
 			name: "Rick and Morty",
 			url: rick,
 			href: "https://davemmweb.github.io/project_rick_and_morty/#/"
-		},
-		{
-			name: "Countries",
-			url: countries,
-			href: "https://countriesclient-production.up.railway.app/home"
 		},
 	]
 	return (
