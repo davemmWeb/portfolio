@@ -12,6 +12,7 @@ import farmastack from '../../assets/farmaStack.png';
 import rick from '../../assets/rick_y_morty.png';
 import dogs from '../../assets/dogs.png';
 import socioextrategico from '../../assets/socio.png';
+import crissaltex from '../../assets/crissaltex.png'
 
 interface DataProjects {
 	name: string
@@ -22,6 +23,11 @@ interface DataProjects {
 export default function App() {
 	const projects: DataProjects[] = [
 		{
+			name: "Crissaltex",
+			url: crissaltex,
+			href: "https://crissaltex.com.co/"
+		},
+		{
 			name: "Socioextrategico",
 			url: socioextrategico,
 			href: "https://socioextrategico.co/"
@@ -31,11 +37,11 @@ export default function App() {
 			url: farmastack,
 			href: "https://main--gleaming-mooncake-32ca84.netlify.app/"
 		},
-		{
-			name: "Shopping List",
-			url: shopping,
-			href: "https://shopping-list-fawn.vercel.app/"
-		},
+		// {
+		// 	name: "Shopping List",
+		// 	url: shopping,
+		// 	href: "https://shopping-list-fawn.vercel.app/"
+		// },
 		{
 			name: "Dogs",
 			url: dogs,

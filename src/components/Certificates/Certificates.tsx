@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import sena from '../../assets/Certificado Sena Scrum.png'
 import henry from '../../assets/CertificateHenry.jpg'
 import cloudinary from '../../assets/CertificateCloudinary.png'
+import analytic from '../../assets/analiticaDeDatos.png'
 
 export type CertificatesProps = {
 
@@ -29,6 +30,11 @@ const Certificates: React.FC<CertificatesProps> = () => {
 			name: "Full Stack Web Developer",
 			description: "Henry's Full Stack Web Developer Certification is a comprehensive program designed to equip individuals with the skills and knowledge to master both front-end and back-end web development. Henry is a renowned educational institution known for its immersive and hands-on approach to teaching web development.",
 			image: henry
+		},
+		{
+			name: "Data Analytics with Phyton",
+			description: "This course was an incredible journey into the world of data, where I acquired the knowledge and skills to analyze and derive meaningful insights from vast datasets using Python.",
+			image: analytic
 		},
 	]
 
@@ -61,7 +67,7 @@ const Certificates: React.FC<CertificatesProps> = () => {
 					Some certifications and degrees obtained
 				</p>
 			</div>
-			<div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+			<div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 
 
 				{

@@ -4,9 +4,11 @@ import typescript from '../../assets/Typescript.png'
 import react from '../../assets/react.svg'
 import html from '../../assets/html.png'
 import redux from '../../assets/redux.png'
-import next from '../../assets/next.jpeg'
+import mui from '../../assets/mui.jpeg'
 import vue from '../../assets/vue.png'
 import css from '../../assets/css.svg'
+import java from '../../assets/java.jpeg'
+import tailwind from '../../assets/tailwind.png'
 
 export type SkillsProps = {
 }
@@ -57,8 +59,18 @@ const Skills: React.FC<SkillsProps> = () => {
 			percentage: "70%"
 		},
 		{
-			name: "Next",
-			src: next,
+			name: "Java",
+			src: java,
+			percentage: "70%"
+		},
+		{
+			name: "Tailwind",
+			src: tailwind,
+			percentage: "70%"
+		},
+		{
+			name: "Mui",
+			src: mui,
 			percentage: "70%"
 		},
 	]
@@ -71,17 +83,17 @@ const Skills: React.FC<SkillsProps> = () => {
 				</p>
 			</div>
 
-			<div
-				className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-4"
-			>
+			<div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-5">
 				{skills.map((skill, i) => (
-					<div key={i} className="gap-4 p-2 shadow-xl transition hover:border-third/10 hover:shadow-third/10">
-						<h2 className="text-2xl font-bold text-secondary" style={{ marginLeft: "40%" }}>{skill.percentage}</h2>
-						<img src={skill.src} alt={skill.name} className="h-8 w-8 md:h-24 md:w-24 sm:h-20 sm:w-20" style={{ marginLeft: "40%" }} />
-						<p className="mt-1 text-lg text-third" style={{ marginLeft: "35%" }}>{skill.name}</p>
+					<div key={i} className="p-2 shadow-xl transition hover:border-third/10 hover:shadow-third/10">
+						<img
+							src={skill.src}
+							alt={skill.name}
+							className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 mx-auto"
+						/>
+						<p className="mt-1 text-lg text-third text-center">{skill.name}</p>
 					</div>
 				))}
-
 			</div>
 		</div>
 	</section>;
