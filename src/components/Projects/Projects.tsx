@@ -7,12 +7,11 @@ import "swiper/css/pagination";
 // import "./styles.css";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-import shopping from '../../assets/shoppingList.png';
+import crissaltex from '../../assets/crissaltex.png';
+import dogs from '../../assets/dogs.png';
 import farmastack from '../../assets/farmaStack.png';
 import rick from '../../assets/rick_y_morty.png';
-import dogs from '../../assets/dogs.png';
 import socioextrategico from '../../assets/socio.png';
-import crissaltex from '../../assets/crissaltex.png'
 
 interface DataProjects {
 	name: string
