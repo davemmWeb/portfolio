@@ -49,7 +49,7 @@ export default function App() {
 		{
 			name: "Rick and Morty",
 			url: rick,
-			href: "https://davemmweb.github.io/project_rick_and_morty/#/"
+			href: "https://project-rick-and-morty-sigma.vercel.app/"
 		},
 	]
 	return (
