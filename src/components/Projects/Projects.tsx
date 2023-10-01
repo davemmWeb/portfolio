@@ -59,9 +59,10 @@ export default function App() {
 		},
 	]
 	return (
-		<section id="projects" >
-			<div style={{ boxShadow: "40px", height: 520, margin: 20 }}>
-				<h1 className="text-text text-center mb-2">Click on the image to see the deploy</h1>
+		<section id="projects" className="bg-bgOne text-white" style={{ margin: 20 }}>
+			<div style={{ boxShadow: "40px", margin: 20 }}>
+				<h1 className="text-3xl text-center sm:text-4xl font-bold" style={{ marginBottom: "2rem" }}>Projects</h1>
+				<p className="text-third text-center mb-2 font-bold" style={{ marginBottom: "2rem" }}>Click on the image to see the deploy</p>
 				<Swiper
 					effect={"coverflow"}
 					grabCursor={true}
@@ -81,17 +82,17 @@ export default function App() {
 					{
 						projects.map((pro, i) => {
 							return <SwiperSlide key={i}>
-								<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-									<div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-										<h1 style={{ color: "white", marginBottom: 8 }}>{pro.name}</h1>
-										<p style={{ color: "white", fontSize: "12px", marginBottom: 8 }}>{pro.description}</p>
-										<p style={{ color: "white", marginBottom: 8 }}>Tecnologies</p>
-										<p style={{ color: "white" }}>{pro.stack}</p>
-									</div>
+								<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 text-center">
 									<div>
 										<a href={pro.href} target="_blank">
 											<img src={pro.url} alt={pro.name} />
 										</a>
+									</div>
+									<div style={{ margin: 20, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+										<h1 style={{ marginBottom: 8 }}>{pro.name}</h1>
+										<p style={{ fontSize: "12px", marginBottom: 8 }}>{pro.description}</p>
+										<p style={{ marginBottom: 8 }}>Tecnologies</p>
+										<p>{pro.stack}</p>
 									</div>
 
 								</div>
