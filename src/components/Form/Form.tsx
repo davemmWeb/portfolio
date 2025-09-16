@@ -26,13 +26,6 @@ const Form = () => {
     });
   };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Aquí puedes agregar la lógica para enviar el formulario o realizar otras acciones.
-        console.log('Formulario enviado:', formData);
-    };
-
-
   const handleDownloadPdf = () => {
     const doc = new jsPDF();    
     
