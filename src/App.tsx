@@ -5,6 +5,7 @@ import { NavBar } from './components/NavBar'
 import { Profile } from './components/Profile'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
+import Form from './components/Form/Form'
 
 function App() {
   // npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
@@ -18,6 +19,7 @@ function App() {
       <About />
       <Certificates />
       <Projects />
+      <Form />
       <Skills />
       <Contact />
     </div>
